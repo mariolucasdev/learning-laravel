@@ -13,7 +13,7 @@ class SiteController extends Controller
      */
     public function index()
     {
-        echo 'Home page';
+        return view('home');
     }
 
     /**
