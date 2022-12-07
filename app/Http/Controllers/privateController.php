@@ -14,6 +14,8 @@ class privateController extends Controller
      */
     public function __invoke(Request $request)
     {
-        echo 'Políticas de Privacidade';
+        return view('private', [
+            'name' => 'Laravel Cool'
+        ]);
     }
 }
