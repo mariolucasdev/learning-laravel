@@ -14,7 +14,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($clients as $client)
+            @foreach ($clients as $client)
                 <tr>
                     <th scope="row">{{ $client->id }}</th>
                     <td><a href="{{ route('clients.show', $client) }}">{{ $client->nome }}</a></td>
@@ -24,4 +24,6 @@
             @endforeach
         </tbody>
     </table>
+
+    <a class="btn btn-success" href="{{ route('clients.create') }}"> Cadastrar Cliente </a>
 @endsection

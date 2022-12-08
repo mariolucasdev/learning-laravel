@@ -35,4 +35,28 @@ class ClientController extends Controller
             'client' => $client
         ]);
     }
+
+    /**
+     * Form to Create Client
+     *
+     * @return void
+     */
+    public function create()
+    {
+        return view('clients.create');
+    }
+
+    /**
+     * Store Clients Data In Database
+     *
+     * @return void
+     */
+    public function store(Request $request)
+    {
+        $dados = $request->except('_token');
+
+        Client::create($dados);
+
+        return redirect('/clients');
+    }
 }
