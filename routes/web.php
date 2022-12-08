@@ -23,4 +23,5 @@ Route::get('/servicos', [SiteController::class, 'services']);
 Route::get('/servico/{id?}', [SiteController::class, 'service']);
 Route::get('/privacidade', privateController::class);
 
-Route::get('/clients', [ClientController::class, 'index']);
+Route::get('/clients', [ClientController::class, 'index'])->name('clients.index');
+Route::get('/clients/{id}', [ClientController::class, 'show'])->name('clients.show');
