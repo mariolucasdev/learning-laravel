@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\privateController;
 use App\Http\Controllers\SiteController;
+use App\Models\Client;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +22,5 @@ Route::get('/sobre', [SiteController::class, 'about']);
 Route::get('/servicos', [SiteController::class, 'services']);
 Route::get('/servico/{id?}', [SiteController::class, 'service']);
 Route::get('/privacidade', privateController::class);
+
+Route::get('/clients', [ClientController::class, 'index']);
