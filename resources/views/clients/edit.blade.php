@@ -10,12 +10,12 @@
         <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>
             <input type="text" value="{{ $client->nome }}" class="form-control" id="nome" name="nome"
-                placeholder="Digite o noem">
+                placeholder="Digite o nome" required>
         </div>
         <div class="mb-3">
             <label for="endereco" class="form-label">Endereço</label>
             <input type="endereco" value="{{ $client->endereco }}" class="form-control" id="endereco" name="endereco"
-                placeholder="Digite o Endereço">
+                placeholder="Digite o Endereço" required>
         </div>
         <div class="mb-3">
             <label for="observacao" class="form-label">Observação</label>

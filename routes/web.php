@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [SiteController::class, 'index']);
+Route::get('/', [SiteController::class, 'index'])->name('index');
 Route::get('/sobre', [SiteController::class, 'about']);
 Route::get('/servicos', [SiteController::class, 'services']);
 Route::get('/servico/{id?}', [SiteController::class, 'service']);
