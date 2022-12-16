@@ -21,6 +21,12 @@
                     <td>{{ $client->endereco }}</td>
                     <td>
                         <a class="btn btn-primary" href="{{ route('clients.edit', $client->id) }}">Editar</a>
+                        <form method="POST" action="{{ route('clients.destroy', $client) }}" style="display: inline">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit"
+                                onclick="return confirm('Deseja realmente excluir esse clientes?')"> Apagar </button>
+                        </form>
                     </td>
                 </tr>
             @endforeach

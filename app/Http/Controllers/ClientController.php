@@ -75,6 +75,13 @@ class ClientController extends Controller
         ]);
     }
 
+    /**
+     * Update Client
+     *
+     * @param integer $id
+     * @param Request $request
+     * @return void
+     */
     public function update(int $id, Request $request)
     {
         $client = Client::find($id);
@@ -85,6 +92,13 @@ class ClientController extends Controller
             'observacao' => $request->observacao
         ]);
 
+        return redirect('/clients');
+    }
+
+    public function destroy(int $id)
+    {
+        $client = Client::find($id);
+        $client->delete();
         return redirect('/clients');
     }
 }
